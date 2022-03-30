@@ -1,0 +1,14 @@
+body {
+    padding: 10px;
+    background-image: url("/static/auctions/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+mark
+{
+  background-color: #9a0e2a;
+  color: white;
+  border-radius: 3px;
+}

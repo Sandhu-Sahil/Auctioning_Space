@@ -1,0 +1,33 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+    <h2 style="text-align: center; text-decoration: underline; color: white;"><span style="background: rgba(0, 0, 0, 0.75); border-radius: 5px;">Login</span></h2>
+
+    {% if message %}
+        <div><span style="background: #9a0e2a; color: white; border-radius: 3px;">{{ message }}</span></div>
+    {% endif %}
+
+    <div style="padding-left: 500px; padding-right: 500px;">
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <input autofocus class="form-control" type="text" name="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" name="password" placeholder="Password">
+            </div>
+            <div style="text-align: center;">
+                <input class="btn btn-primary" type="submit" value="Login">
+            </div>
+            
+        </form>
+    </div>
+    <br>
+    <div style="text-align: center; color: white;">
+        <span style="background: rgba(0, 0, 0, 0.7); border-radius: 3px;">
+            Don't have an account? <a href="{% url 'register' %}" style="color: turquoise;">Register here.</a>
+        </span>
+    </div>
+    
+{% endblock %}

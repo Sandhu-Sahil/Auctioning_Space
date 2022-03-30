@@ -1,0 +1,37 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            {% for auction in auctions.all %}
+
+                <div class="card list-details col-lg-4 col-sm-12">
+                    <div class="card-body">
+                    <h5 class="card-title product-title product-description"><i>{{auction.title}}</i></h5>
+                    <h6 class="card-subtitle mb-2 text-muted product-description">{{auction.datepublished}}</h6>
+                    {% if auction.image %}
+                        <img class="img-fluid" src="{{auction.image.url}}" alt="connect" style="max-height:300px">
+                    {% endif %}
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        {% if auction.last_bid %}
+                            {% if auction.closed == True %}
+                                <li class="list-group-item product-description">Solded in: {{auction.last_bid.bid}}</li>
+                            {% else %}
+                                <li class="list-group-item product-description">Current Bid: {{auction.last_bid.bid}}</li>
+                            {% endif %}
+                        {% else %}
+                            <li class="list-group-item product-description">Initial Bid: {{auction.starting_bid}}</li>
+                        {% endif %}
+                        <li class="list-group-item product-description">Category: {{auction.category}}</li>
+                    </ul>
+                    {% if user.is_authenticated %}
+                        <div class="card-body">
+                            <a href="{% url 'auction_view' auction=auction.id %}" class="">Open this listing<i class="fa fa-angle-double-right"></i></a>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
