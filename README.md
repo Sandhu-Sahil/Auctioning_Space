@@ -6,6 +6,6 @@
 
 ## <mark style="background-color: white; color: black;"><b>Scores:</b></mark>
 too be released soon....
-![Scores]()
+![Scores](https://github.com/Sandhu-Sahil/Auctioning_Space/blob/master/scores_released_commerce.jpg)
 
 ## <mark style="background-color: white; color: black;"><b>Other Projects:<a href="https://github.com/Sandhu-Sahil/Project_List_Professional_Web_Programming_Harvard_University"> List of Projects</a></b></mark>
