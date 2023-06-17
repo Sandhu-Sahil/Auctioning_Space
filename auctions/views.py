@@ -136,16 +136,17 @@ def add_auction(request):
             return redirect('index')
 
 
-@login_required
 def category_view(request, category, person):
+    user = request.user
+    # if user.id is None:
+    #     return redirect('login')
+    
     category_name = Category.objects.get(name=category)
     person_name = Person.objects.get(person=person)
     auctions = Auction.objects.filter(category=category_name, person=person_name).order_by('id').reverse()
     persons = Category.objects.all()
-    user = request.user
-
-    if user.id is None:
-        return render(request, "auctions/index.html")
+    print(user)
+    print(user.id)
     
     context = {
         'auctions': auctions,
