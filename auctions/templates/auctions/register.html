@@ -7,7 +7,7 @@
     {% if message %}
         <div>{{ message }}</div>
     {% endif %}
-    <div style="padding-left: 500px; padding-right: 500px;">
+    <div class="loginbox" >
         <form action="{% url 'register' %}" method="post">
             {% csrf_token %}
             <div class="form-group">

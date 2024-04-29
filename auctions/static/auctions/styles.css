@@ -5,10 +5,51 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.navbarcustum {
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Add blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
 
 mark
 {
   background-color: #9a0e2a;
   color: white;
   border-radius: 3px;
+}
+
+.loginbox{
+  padding-left: 500px;
+  padding-right: 500px;
+}
+
+.auctiondata{
+  background-color: white; 
+  border-radius: 10px; 
+  padding-left: 30px; 
+  border-color: black; 
+  border-style: solid; 
+  margin: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  #id_description{
+    columns: 10;
+  }
+  body{
+    background-repeat: repeat;
+    height: 100vh;
+  }
+  .list-details{
+    margin: 5px;
+  }
+  
+  .loginbox{
+    padding-left: 0px;
+    padding-right: 0px;
+  } 
+  
+  .navcustum{
+    justify-content: center;
+  }
 }

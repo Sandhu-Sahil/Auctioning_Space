@@ -2,8 +2,8 @@
 {% load static %}
 {% block body %}
 
-<div class="container">
-    <div class="add-auction" style="background-color: white; margin-right: 400px; padding-left: 20px; padding-bottom: 5px;">
+<div class="container" style="margin-bottom: 20px;">
+    <div class="add-auction" style="background-color: white; padding: 15px; margin-bottom: 20px;">
         <h2 class="title" style="text-decoration: underline;">Add Listing</h2>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}

@@ -8,7 +8,7 @@
         <div><span style="background: #9a0e2a; color: white; border-radius: 3px;">{{ message }}</span></div>
     {% endif %}
 
-    <div style="padding-left: 500px; padding-right: 500px;">
+    <div class="loginbox" >
         <form action="{% url 'login' %}" method="post">
             {% csrf_token %}
             <div class="form-group">

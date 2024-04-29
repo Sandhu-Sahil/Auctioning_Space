@@ -23,9 +23,11 @@
                         {% endif %}
                         <li class="list-group-item">Category: {{auction.category}}</li>
                     </ul>
+                    {% if user.is_authenticated %}
                     <div class="card-body">
                         <a href="{% url 'auction_view' auction=auction.id %}" class="card-link btn-card">Auction page <i class="fa fa-angle-double-right"></i></a>
                     </div>
+                    {% endif %}
                 </div>
             {% endfor %}
         </div>
